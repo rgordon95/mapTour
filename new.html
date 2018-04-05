@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>My Map</title>
+    <style>
+
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+
+    </style>
+  </head>
+  <body>
+		<header>
+	    <h3>My Favorite Places In Manhattan</h3>
+	  </header>
+<main id='map'></main>
+<content>
+	<h2>Rosa Mexicana</h2>
+    <script>
+      function initMap() {
+    	var uluru = {lat: 40.73825, lng: -73.99075};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+</content>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs2Q2XLa17xwLXa_nzdWG8AN2nrJ6dBno&callback=initMap">
+    </script>
+  </body>
+</html>
